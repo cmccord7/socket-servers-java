@@ -24,7 +24,7 @@ The projects compare a **single-threaded (iterative)** server with a **multi-thr
 ### Iterative Socket Server (ISS)
 
 A **single-threaded server** that processes **one client request at a time**, handling all incoming connections serially.
-
+ 
 **Key Characteristics**
 - One request processed at a time
 - Requests queued automatically by `ServerSocket`
