@@ -32,10 +32,10 @@ Current Users
 
 Running Processes
 
-📄 Full technical report:
+Full technical report:
 docs/Iterative_Server_Report.pdf
 
-⚙️ Concurrent Socket Server (CSS)
+Concurrent Socket Server (CSS)
 
 A multi-threaded server that spawns a new thread per client request, allowing multiple clients to be processed in parallel.
 
@@ -61,7 +61,7 @@ Current Users
 
 Running Processes
 
-📄 Full technical report:
+Full technical report:
 docs/Concurrent_Server_Report.pdf
 
 Client–Server Architecture
