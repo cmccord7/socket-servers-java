@@ -39,7 +39,7 @@ A **single-threaded server** that processes **one client request at a time**, ha
 - Running Processes  
 
 **Full Technical Report**  
-[Iterative Server Report (PDF)](docs/Iterative_Server_Report.pdf)
+[Iterative Server Report (PDF)](docs/ISS_Report_McCord_Holmes.docx)
 
 ---
 
@@ -61,7 +61,7 @@ A **multi-threaded server** that spawns a **new thread per client request**, all
 - Running Processes  
 
 **Full Technical Report**  
-[Concurrent Server Report (PDF)](docs/Concurrent_Server_Report.pdf)
+[Concurrent Server Report (PDF)](docs/CSS_Report_McCord_Holmes.docx)
 
 ---
 
