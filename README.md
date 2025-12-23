@@ -6,7 +6,8 @@
 <p align="center">
   CNT4504 – Computer Networks & Distributed Processing  
   <br />
-  University Coursework Project
+  University of North Florida
+  Connor McCord and James Holmes
 </p>
 
 ---
