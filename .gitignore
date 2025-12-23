@@ -1,0 +1,17 @@
+# Java
+*.class
+*.jar
+*.war
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Build/output
+bin/
+out/
+target/
+
+# OS
+.DS_Store
