@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 This repository contains two Java-based client–server implementations developed to analyze how **server architecture impacts performance**, specifically **turn-around time** under increasing client load.
 
@@ -19,9 +19,9 @@ The projects compare a **single-threaded (iterative)** server with a **multi-thr
 
 ---
 
-## 📂 Projects Included
+## Projects Included
 
-### 🔁 Iterative Socket Server (ISS)
+### Iterative Socket Server (ISS)
 
 A **single-threaded server** that processes **one client request at a time**, handling all incoming connections serially.
 
@@ -38,12 +38,12 @@ A **single-threaded server** that processes **one client request at a time**, ha
 - Current Users  
 - Running Processes  
 
-📄 **Full Technical Report**  
-➡️ `docs/Iterative_Server_Report.pdf`
+**Full Technical Report**  
+`docs/Iterative_Server_Report.pdf`
 
 ---
 
-### ⚙️ Concurrent Socket Server (CSS)
+### Concurrent Socket Server (CSS)
 
 A **multi-threaded server** that spawns a **new thread per client request**, allowing multiple clients to be processed in parallel.
 
@@ -60,12 +60,12 @@ A **multi-threaded server** that spawns a **new thread per client request**, all
 - Current Users  
 - Running Processes  
 
-📄 **Full Technical Report**  
-➡️ `docs/Concurrent_Server_Report.pdf`
+**Full Technical Report**  
+`docs/Concurrent_Server_Report.pdf`
 
 ---
 
-## 🖧 Client–Server Architecture
+## Client–Server Architecture
 
 Both servers utilize a **multi-threaded client** capable of generating configurable numbers of concurrent requests.
 
@@ -83,7 +83,7 @@ Each request executes real Linux system commands on the server, and elapsed time
 
 ---
 
-## 📊 Key Findings (Summary)
+## Key Findings (Summary)
 
 - Increasing client load **significantly increases turn-around time** in the iterative server
 - The concurrent server maintains **lower average latency** as client count increases
@@ -99,17 +99,3 @@ Detailed charts and analysis are available in the full reports.
 
 ---
 
-## 🗂 Repository Structure
-
-```text
-.
-├── iterative-server/
-│   ├── src/
-│   └── README.md
-├── concurrent-server/
-│   ├── src/
-│   └── README.md
-├── docs/
-│   ├── Iterative_Server_Report.pdf
-│   └── Concurrent_Server_Report.pdf
-└── README.md
