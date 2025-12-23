@@ -1,111 +1,115 @@
-Iterative vs Concurrent Socket Servers (Java) 
-By Connor McCord and James Holmes
+<p align="center">
+  <h1 align="center">Iterative vs Concurrent Socket Servers</h1>
+  <h3 align="center">Java Client–Server Performance Analysis</h3>
+</p>
 
-This repository contains two Java-based client–server implementations developed to analyze how server architecture impacts performance, specifically turn-around time under increasing client load.
+<p align="center">
+  CNT4504 – Computer Networks & Distributed Processing  
+  <br />
+  University Coursework Project
+</p>
 
-The projects were completed as part of CNT4504 – Computer Networks & Distributed Processing and focus on comparing a single-threaded (iterative) server with a multi-threaded (concurrent) server using identical workloads and testing methodology.
+---
 
-Projects Included
-Iterative Socket Server (ISS)
+## 📌 Overview
 
-A single-threaded server that processes one client request at a time, handling all incoming connections serially.
+This repository contains two Java-based client–server implementations developed to analyze how **server architecture impacts performance**, specifically **turn-around time** under increasing client load.
 
-Key characteristics:
+The projects compare a **single-threaded (iterative)** server with a **multi-threaded (concurrent)** server using identical workloads and testing methodology.
 
-One request processed at a time
+---
 
-Client requests are queued automatically by ServerSocket
+## 📂 Projects Included
 
-Simple design but poor scalability under load
+### 🔁 Iterative Socket Server (ISS)
 
-Supported operations:
+A **single-threaded server** that processes **one client request at a time**, handling all incoming connections serially.
 
-Date & Time
+**Key Characteristics**
+- One request processed at a time
+- Requests queued automatically by `ServerSocket`
+- Simple design with limited scalability
 
-Uptime
+**Supported Operations**
+- Date & Time  
+- Uptime  
+- Memory Usage  
+- Netstat  
+- Current Users  
+- Running Processes  
 
-Memory Usage
+📄 **Full Technical Report**  
+➡️ `docs/Iterative_Server_Report.pdf`
 
-Netstat
+---
 
-Current Users
+### ⚙️ Concurrent Socket Server (CSS)
 
-Running Processes
+A **multi-threaded server** that spawns a **new thread per client request**, allowing multiple clients to be processed in parallel.
 
-Full technical report:
-docs/Iterative_Server_Report.pdf
+**Key Characteristics**
+- Parallel request handling
+- Improved responsiveness under load
+- Higher scalability with increased complexity
 
-Concurrent Socket Server (CSS)
+**Supported Operations**
+- Date & Time  
+- Uptime  
+- Memory Usage  
+- Netstat  
+- Current Users  
+- Running Processes  
 
-A multi-threaded server that spawns a new thread per client request, allowing multiple clients to be processed in parallel.
+📄 **Full Technical Report**  
+➡️ `docs/Concurrent_Server_Report.pdf`
 
-Key characteristics:
+---
 
-Parallel request handling
+## 🖧 Client–Server Architecture
 
-Improved responsiveness under load
+Both servers utilize a **multi-threaded client** capable of generating configurable numbers of concurrent requests.
 
-Higher scalability at the cost of increased complexity
+**Client Features**
+- User-defined server address and port
+- Configurable request counts  
+  - ISS: 1, 5, 10, 15, 20, 25 clients  
+  - CSS: 1, 5, 10, 15, 20, 25, 100 clients  
+- Metrics collected:
+  - Individual request turn-around time  
+  - Total turn-around time  
+  - Average turn-around time  
 
-Supported operations:
+Each request executes real Linux system commands on the server, and elapsed time is measured from transmission to response.
 
-Date & Time
+---
 
-Uptime
+## 📊 Key Findings (Summary)
 
-Memory Usage
+- Increasing client load **significantly increases turn-around time** in the iterative server
+- The concurrent server maintains **lower average latency** as client count increases
+- Iterative servers are suitable for:
+  - Low-traffic environments
+  - Simple or embedded systems
+- Concurrent servers are better suited for:
+  - Multi-user systems
+  - Performance-sensitive applications
+  - Scalable network services
 
-Netstat
+Detailed charts and analysis are available in the full reports.
 
-Current Users
+---
 
-Running Processes
+## 🗂 Repository Structure
 
-Full technical report:
-docs/Concurrent_Server_Report.pdf
-
-Client–Server Architecture
-
-Both servers are paired with a multi-threaded client capable of generating configurable numbers of concurrent requests.
-
-Client features:
-
-User-specified server address and port
-
-Configurable request counts:
-
-ISS: 1, 5, 10, 15, 20, 25 clients
-
-CSS: 1, 5, 10, 15, 20, 25, 100 clients
-
-Measures:
-
-Individual request turn-around time
-
-Total turn-around time
-
-Average turn-around time
-
-The client executes real Linux system commands on the server and measures the elapsed time for each request to complete.
-
-Key Findings (Summary)
-
-Increasing client load significantly increases turn-around time for the iterative server
-
-The concurrent server maintains lower average latency as client count increases
-
-Iterative servers are suitable for:
-
-Low traffic environments
-
-Simple or embedded systems
-
-Concurrent servers are better suited for:
-
-Multi-user systems
-
-Performance-sensitive environments
-
-Scalable network services
-
-Detailed data, charts, and comparative analysis are available in the full reports.
+```text
+.
+├── iterative-server/
+│   ├── src/
+│   └── README.md
+├── concurrent-server/
+│   ├── src/
+│   └── README.md
+├── docs/
+│   ├── Iterative_Server_Report.pdf
+│   └── Concurrent_Server_Report.pdf
+└── README.md
